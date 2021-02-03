@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+
+
+</head>
+
+<body onload="onInit()">
+
+    <!-- /////////////////////////////navbar///////////////////////////////// -->
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand">Place Keeper</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="../index.html" onclick="moveToMap()">Home</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Map <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../pages/setting.html" onclick="moveToSetting()">Settings</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- ////////////////////////////////////////////////////////////////// -->
+    <div class="map-container">
+        <div id="map" class="m-2"></div>
+        <div class="main-location-settings">
+            <img src="../img/my-location.png" class="btn target-btn" onclick="getCurrPosition()"></img>
+
+            <input onclick="deleteMarkers();" type="button" value="Delete Markers" class="btn delete-btn bg-danger text-light m-2"/>
+            <div class="places-container bg-light m-2"></div>
+        </div>
+    </div>
+
+
+    <script defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCCdn5yr7TIynswSXzSq6JNodbHBrTZPVU&callback=initMap">
+    </script>
+    <script src="../js/place-services.js"></script>
+    <script src="../lib/jquery.js"></script>
+    <script src="../js/utils.js"></script>
+    <script src="../js/storage-service.js"></script>
+    <script src="../js/main-service.js"></script>
+    <script src="../js/main-controler.js"></script>
+</body>
+
+</html>

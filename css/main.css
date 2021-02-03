@@ -1,0 +1,76 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    margin: 0;
+}
+
+.welcome-container {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.welcome {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 6em;
+    height: 4em;
+    font-size: 100px;
+    padding: 50px;
+}
+
+
+.map-container {
+    display: flex;
+    /* flex-direction: column; */
+    width: 100vw;
+    flex-grow: 50%;
+    /* align-items: flex-start; */
+    height: 92%;
+}
+
+.main-location-settings {
+    display: flex;
+    flex-direction: column;
+}
+
+.target-btn {
+    display: flex;
+    align-self: flex-start;
+    /* position: absolute; */
+    /* right: 43%; */
+    /* bottom: 2%; */
+    width: 80px;
+
+}
+
+#map {
+    height: 98%;
+    width: 50%;
+}
+
+.navbar-brand {
+    font-family: 'Kaushan Script', 'Helvetica Neue', Helvetica, Arial, cursive;
+}
+
+.delete-btn {
+    width: 150px;
+}
+
+.places-container {
+    width: 50vw;
+    height: 73vh;
+}
+
+.place{
+    width: 47vw;
+    height: 10vh;
+}
